@@ -1,186 +1,158 @@
-body{
-    text-align: center;
-    font-size: clamp(1rem, 6vw, 1rem);
-    @media (width <= 700px ){
-        background-color: black;
-        color: white;
-    }
-   
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Desarrollador Web</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="http://localhost/walletdigital/try/portafolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="portafolio.css">
+    <script defer src="script.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header class="p-4 header">
+        <h1>Raul De Jesus Martinez Cortez</h1>
+        <p>Desarrollador Web | Frontend & Backend</p>
+        <a href="cv.pdf" download="Mi_CV.pdf">
+            <button class="button">
+                <span class="button-content">Descargar CV </span>
+              </button>
+        </a>
+        <br><br>
+        <img class="ip img-fluid" src="images/raul.jpg" alt="images/raul.jpg">
+    </header>
+    <br><br><br>
 
-.header {
-    background-color: deepskyblue;
-    color: white;
-    text-align: center;
-    @media (width <= 700px ){
-        background-color: rgb(111, 1, 208);
-        color: white;
-        width: auto, fixed;
-    }
+    <div class="p">
+    <h1 class="h">Sobre Mi</h1>
+    <p>Actualmente soy estudiante de la 
+        <span style="color: green;">"Universidad Tecnología De Coahuila"</span>, 
+        cursando la carrera de Técnico en Desarrollo de Software Multiplataforma. <br> Me apasiona la tecnología, la programación y el desarrollo de aplicaciones tanto en frontend como en backend. <br>Me especializo en el diseño y desarrollo de soluciones web y móviles, con experiencia en tecnologías como 
+        HTML, CSS, JavaScript, y un poco de  React Node.js. <br> Además, me interesa la optimización del rendimiento, la seguridad en aplicaciones y la experiencia del usuario. <br>Siempre estoy en constante aprendizaje, explorando nuevas herramientas y metodologías para mejorar mis habilidades como desarrollador. <br> Mi objetivo es contribuir a proyectos innovadores y ofrecer soluciones eficientes y escalables.</p>
     
-}
-
-
-footer{
-    background-color: deepskyblue;
-    color: white;
-    text-align: center;
-    @media (width <= 700px ){
-      background-color: rgb(111, 1, 208);
-      color: white;
-      width: auto, fixed;
-  }
-}
-
-.card{
-    @media (width <= 700px ){
-        height: 100px;
-        margin: 10px;
-        background-color: rgba(97, 94, 94, 0.1);
-        color: white;
-        width: auto;
-        height: auto;
-        font-size: clamp(1rem, 4vw, 1rem);
-    }
-}
-
-.ip{
-    border-radius: 80%;
-    border-width: 10px;
-    border-style: solid;
-    border-color: white;
-    height: 220px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    @media (width <= 700px ){
-        height: 130px;
-        transform: translateY(95px);
-        margin-left: 35%;
-        border-radius: 50%;
-    }
-
-}
-
-p .h{
-    text-align:center, justify;
-    margin: 50px;
-    @media (width <= 700px ){
-        transform: translateY(99960px);
-        margin: 30%;
-    }
-}
-
-
-.skills-wrapper {
-  display: inline-flex;
-  list-style: none;
-  justify-content: center;
-  gap: 20px; /* Espacio entre los iconos */
-  padding-top: 20px;
-  @media (width <= 700px ){
-    gap: 15px;
-    padding-top: 15px;
-  }
-}
-
-.skill-icon {
-  position: relative;
-  background-color: #fff; /* Fondo por defecto */
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  @media (width <= 700px ){
-    height: 80px;
-    width: 55px;
-    align-items: top;
-  }
-}
-
-
-.skill-icon .tooltip::before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: #333;
-  transform: rotate(45deg);
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.skill-icon:hover {/* Fondo más oscuro al pasar el mouse */
-  transform: scale(2.1);
-  transform: translateY(-10px);
-  background-color: cornflowerblue;
-}
-
-.skill-icon:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-}
-
-.skill-icon img {
-  width: 40px; /* Tamaño del icono */
-  height: 40px;
-  transition: all 0.3s ease;
-}
-
-.skill-icon:hover img {
-  transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el mouse */
-}
-
-.skill-icon a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* From Uiverse.io by Madflows */ 
-.button {
-  position: relative;
-  overflow: hidden;
-  height: 3rem;
-  padding: 0 2rem;
-  border-radius: 1.5rem;
-  background: #3d3a4e;
-  background-size: 400%;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  @media (width <= 700px ){
-    transform: translateX(150px);
-}
-}
-
-.button:hover::before {
-  transform: scaleX(1);
-}
-
-.button-content {
-  position: relative;
-  z-index: 1;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  width: 100%;
-  height: inherit;
-  border-radius: inherit;
-  background: linear-gradient(
-    82.3deg,
-    rgba(150, 93, 233, 1) 10.8%,
-    rgba(99, 88, 238, 1) 94.3%
-  );
-  transition: all 0.475s;
-}
+    </div>
+    <br>
+    <section class="skills">
+        <h1>My Skills</h1>
+        <ul class="skills-wrapper">
+            <li class="skill-icon">
+                <a href="#" class="html">
+                    <span class="tooltip">HTML</span>
+                    <span class="iconify" data-icon="logos:html-5" data-width="40" data-height="40"></span>
+                </a>
+            </li>
+            <li class="skill-icon">
+                <a href="#" class="css">
+                    <span class="tooltip">CSS</span>
+                    <span class="iconify" data-icon="logos:css-3" data-width="40" data-height="40"></span>
+                </a>
+            </li>
+            <li class="skill-icon">
+                <a href="#" class="javascript">
+                    <span class="tooltip">JavaScript</span>
+                    <span class="iconify" data-icon="logos:javascript" data-width="40" data-height="40"></span>
+                </a>
+            </li>
+            <li class="skill-icon">
+                <a href="#" class="react">
+                    <span class="tooltip">React</span>
+                    <span class="iconify" data-icon="logos:react" data-width="40" data-height="40"></span>
+                </a>
+            </li>
+            <li class="skill-icon">
+                <a href="#" class="nodejs">
+                    <span class="tooltip">Node.js</span>
+                    <span class="iconify" data-icon="logos:nodejs" data-width="40" data-height="40"></span>
+                </a>
+            </li>
+            <li class="skill-icon">
+                <a href="" class="php">
+                    <span class="tooltip">PHP</span>
+                    <span class="iconify" data-icon="logos:php" data-width="40" data-height="40"></span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    
+    <!-- Script de Iconify -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+      
+      
+    <br><br>
+    <h1>Mis Proyectos</h1>
+    <div class="container text-center mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/mi-pagina.png" class="card-img-top" alt="Historia N.W.A">
+                    <div class="card-body">
+                        <h2 class="card-title">Historia N.W.A</h2>
+                        <p class="card-text">Desarrollo de la cultura hip-hop y sus exponentes.</p>
+                        <a href="mi-pagina.html" class="btn btn-primary">Ir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/burgers-buckers.png" class="card-img-top" alt="Historia N.W.A">
+                    <div class="card-body">
+                        <h2 class="card-title">Burgers Buckers</h2>
+                        <p class="card-text">Pagina Restaurant .</p>
+                        <a href="http://localhost/quinto/mariano.php" class="btn btn-primary">Ir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/icecub.jpeg" class="card-img-top" alt="Historia N.W.A">
+                    <div class="card-body">
+                        <h2 class="card-title">Historia N.W.A</h2>
+                        <p class="card-text">Desarrollo de la cultura hip-hop y sus exponentes.</p>
+                        <a href="mi-pagina.html" class="btn btn-primary">Ir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/icecub.jpeg" class="card-img-top" alt="Historia N.W.A">
+                    <div class="card-body">
+                        <h2 class="card-title">Historia N.W.A</h2>
+                        <p class="card-text">Desarrollo de la cultura hip-hop y sus exponentes.</p>
+                        <a href="mi-pagina.html" class="btn btn-primary">Ir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/icecub.jpeg" class="card-img-top" alt="Historia N.W.A">
+                    <div class="card-body">
+                        <h2 class="card-title">Historia N.W.A</h2>
+                        <p class="card-text">Desarrollo de la cultura hip-hop y sus exponentes.</p>
+                        <a href="mi-pagina.html" class="btn btn-primary">Ir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/icecub.jpeg" class="card-img-top" alt="Historia N.W.A">
+                    <div class="card-body">
+                        <h2 class="card-title">Historia N.W.A</h2>
+                        <p class="card-text">Desarrollo de la cultura hip-hop y sus exponentes.</p>
+                        <a href="mi-pagina.html" class="btn btn-primary">Ir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="p-4 mt-4">
+        <p>&copy; 2025 Raul De Jesus Martinez Cortez - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
