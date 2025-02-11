@@ -55,9 +55,8 @@ footer{
     left: 10px;
     @media (width <= 700px ){
         height: 130px;
-        transform: translateY(425px);
-        margin-left: 25%;
-        border-radius: 50%;
+        transform: translateY(225px);
+        border-radius: 25%;
     }
 
 }
