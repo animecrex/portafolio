@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    height: 200px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card{
+    width: 40px;
+    border-radius: 20px;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(0.20, -0.20, 0, 0.88);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.7);
+    filter: grayscale(1);
+}
+
+.card > .content-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 500px;
+    height: 100px;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    transition-delay: .2s;
+}
+
+.content-card h4, h3{
+    color: #fff;
+    padding: 0px 15px;
+}
+
+.content-card > .name{
+    font-size: 45px;
+    font-family: "Oswald", sans-serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.content-card > .song{
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.content-card > .portada{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 5px;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.7);
+    animation: girar 2.5s linear infinite;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    width: 400px;
+    height: 220px;
+    transform: translateY(-40px);
+    filter: grayscale(0);
+}
+
+input:checked + label .content-card{
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.card[for="s1"]{
+    background: url(images/icecub.jpeg) center center no-repeat;
+    background-size: cover;
+}
+
+.card[for="s2"]{
+    background: url(images/eazy.png) center center no-repeat;
+    background-size: cover;
+}
+
+.card[for="s3"]{
+    background: url(images/michael.jpeg) center center no-repeat;
+    background-size: cover;
+}
+
+.card[for="s4"]{
+    background: url(https://i.postimg.cc/y6hCV7BL/LiSA.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+@keyframes girar {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
