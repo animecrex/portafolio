@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="puerta.css">
+    <title>Puerta</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <img src="https://i.postimg.cc/D0YPFJXw/brick1.png" alt="" class="brick1">
+            <img src="https://i.postimg.cc/c1DmfjbG/brick2.png" alt="" class="brick2">
+            <div class="landscape"></div>
+            <audio src="Audio MP3" class="audio"></audio>
+            <div class="marco">
+                <div class="door">
+                    <div class="chapa"></div>
+                    <div class="manija"></div>
+                    <div class="door-borders">
+                        <div class="borders"></div>
+                        <div class="borders"></div>
+                        <div class="borders"></div>
+                        <div class="borders"></div>
+                        <div class="borders"></div>
+                        <div class="borders"></div>
+                    </div>
+                </div>
+            </div>
+            <img src="https://i.postimg.cc/T1PJZqhs/leaf1.png" alt="" class="leaf1">
+            <img src="https://i.postimg.cc/pXpBCZwh/leaf2.png" alt="" class="leaf2">
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const Door = document.querySelector(".marco");
+const audio = document.querySelector(".audio");
+
+Door.addEventListener('mouseenter', ()=>{
+    audio.play();
+})
+
+Door.addEventListener('mouseleave', ()=>{
+    audio.pause();
+    audio.currentTime = 0;
+})
+
+</script>
