@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1_1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="http://localhost/walletdigital/try/caruel.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <table style="color: aliceblue;" width="85%" align="center">
+        <tr>
+            <th>Eazy-E</th>
+            <th>Ice Cube</th>
+            <th>Dr Dre</th>
+            <th>DJ Yella</th>
+            <th>MC Ren</th>
+            <th>Arabian Prince</th> 
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="radio" name="gangstarap" id="s2">
+            <label for="s2" class="card" name="Jennie">
+                <div class="content-card">
+                    <h3 class="name">eazy e</h4>
+                    <h4 class="song">hello</h3>
+                    <img src="images/albumeazy.jpeg" alt="" class="portada">
+                    <audio src="audio/Eazy-E x Riot (extended)(M4A_128K).m4a" class="audio"></audio>
+                </div>
+            </label>
+            </td>
+            <td align="center">
+                <input type="radio" name="gangstarap" id="s1">
+            <label for="s1" class="card" name="Jisoo">
+                <div class="content-card">
+                    <h3 class="name">Ice cube</h4>
+                    <h4 class="song">It Was A Good Day</h3>
+                    <img src="images/albumcube.jpeg" alt="" class="portada">
+                    <audio src="audio/ItWasAGoodDay.m4a" class="audio"></audio>
+                </div>
+            </label>
+            </td>
+            <td align="center">
+                <input type="radio" name="gangstarap" id="s3">
+            <label for="s3" class="card" name="Rose">
+                <div class="content-card">
+                    <h3 class="name">Dr Dre</h4>
+                    <h4 class="song">Nuthin but a g thang</h3>
+                    <img src="images/adrdre.jpeg" alt="" class="portada">
+                    <audio src="audio/Dr. Dre_ Snoop Dogg - Nuthin_ But A G Thang (sub. español)(M4A_128K).m4a" class="audio"></audio>
+                </div>
+            </label>
+            <section>
+                <div class="w">
+                   <td align="center">
+                        <input type="radio" name="gangstarap" id="s4">
+                    <label for="s4" class="card" name="Rose">
+                        <div class="content-card">
+                            <h3 class="name">Dj yella</h4>
+                            <h4 class="song">Nuthin but a g thang</h3>
+                            <img src="images/alyella.jpeg" alt="" class="portada">
+                            <audio src="#" class="audio"></audio>
+                        </div>
+                    </label>
+                   </td>
+            <td align="center">
+                <input type="radio" name="gangstarap" id="s5">
+                    <label for="s5" class="card" name="Rose">
+                        <div class="content-card">
+                            <h3 class="name">Mc Ren</h4>
+                            <h4 class="song">Pendiente</h3>
+                            <img src="images/almcren.jpeg" alt="" class="portada">
+                            <audio src="audio/jennie.mp3" class="audio"></audio>
+                        </div>
+                    </label>
+            </td>
+            <td align="center">
+                <input type="radio" name="gangstarap" id="s6">
+                    <label for="s6" class="card" name="Rose">
+                        <div class="content-card">
+                            <h3 class="name">arabian Prince</h4>
+                            <h4 class="song">Pendiente</h3>
+                            <img src="images/alarabianprince.jpeg" alt="" class="portada">
+                            <audio src="#" class="audio"></audio>
+                        </div>
+                    </label>
+            </td> 
+                </div>
+            </section>
+            </img></td>
+            
+        </tr>
+    </table>
+</section>
+ </div>
+    </div>
+<section>
+<div class="back">
+<input type="radio" name="gangstarap">
+    <label class="card">Parar</label>
+</div>
+</section>
+<script>
+    const btnCards = document.querySelectorAll('.card');
+
+btnCards.forEach((btnCard) => {
+    btnCard.addEventListener('click', () => {
+        const audio = btnCard.querySelector('.audio');
+        document.querySelectorAll('.audio').forEach(aud => aud.pause());
+        audio.currentTime = 0;
+        audio.play();
+    });
+});
+
+</script>
+</body>
+</html>
