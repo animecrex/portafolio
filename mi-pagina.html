@@ -1,0 +1,144 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="http://localhost/walletdigital/try/caruel.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <title>Mi pagina</title>
+
+        <style>
+            * {
+        text-align: center;
+    }
+            .l {
+                margin-left: 100px;
+                margin-bottom: 250px;
+            }
+            
+            .back {
+                background-color: white;
+                text-align: center;
+                width: 50px;
+                margin-left: 900px;
+
+            }
+
+        </style>
+    </head>
+    <body style="background-image: linear-gradient(to top, red, black)">
+        <div style="text-align: center;">
+            <div class="container-fluid">
+            <strong><h1 style="color: white; font-size: 50px;">Quienes son los N.W.A</h1></strong>
+            </div> 
+        <title>N.W.A</title>
+
+
+    <section>
+        <div align="center"><img src="images/NWA.jpg" height="380" width="430"></img></div>
+        </section>
+        <br><br>
+        <section>
+        <div width="85%"  align="center"><strong><p style="color: aliceblue; text-align: justify; margin-left: 150px; margin-right: 150px; font-size: 20px;">
+            "N.W.A. (abreviatura de Niggaz With Attitude,​ que en español vendría
+            a traducirse como «Negros con Actitud» o «Negros con Orgullo»), fue un grupo estadounidense
+            de hip hop de Compton, California, y está considerado de modo generalizado como el grupo pionero
+            en la formación del subgénero musical gangsta rap. ​Su actividad duró desde 1986 hasta 1991, tiempo
+            en el que se vieron envueltos en la controversia como consecuencia de la naturaleza explícita de sus
+            letras, siendo por ello prohibido en buena parte de las emisoras de radio mainstream de Estados Unidos,
+            llegándose incluso a cancelar alguna de sus giras. A pesar de ello, el grupo logró vender más de 10 millones
+            de discos solo en los Estados Unidos. Los miembros originales del grupo eran DJ Yella, Dr. Dre, Eazy-E, Ice Cube,
+            MC Ren y Arabian Prince. Este último se embarcó en una carrera en solitario en 1989, y Ice Cube dejó el grupo en 
+            diciembre de ese mismo año como consecuencia de disputas sobre regalías dentro del grupo. Varios de estos músicos
+            lograrían discos de platino durante sus carreras en solitario durante los años noventa"
+
+        </p></strong></div>
+    </section>
+        <br><br><br>
+        <br><br>
+    <section>
+        <div style="text-align: center;"><h2 style="color: whitesmoke; font-size: 35px;">Integrantes de N.W.A </h2></div>
+        <div class="wrapper">
+            <div class="container">
+   
+        <div class="container-buttons">
+            <div class="button" data-song="audio/Eazy-E.mp3">
+                <h4 class="btnText">Eazy-E</h4>
+                <audio class="audio">
+                    <source src="audio/Eazy-E.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div class="button" data-song="audio/Ice Cube.mp3">
+                <h4 class="btnText">Ice Cube</h4>
+                <audio class="audio">
+                    <source src="audio/Ice Cube.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div class="button" data-song="audio/Dr_Dre.m4a">
+                <h4 class="btnText">Dr Dre</h4>
+                <audio class="audio">
+                    <source src="audio/Dr_Dre.m4a" type="audio/mp3">
+                </audio>
+            </div>
+            <div class="button" data-song="audio/Quiet.mp3">
+                <h4 class="btnText">Mc Ren</h4>
+                <audio class="audio">
+                    <source src="audio/Quiet.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div class="button" data-song="audio/Quiet.mp3">
+                <h4 class="btnText">Dj Yella</h4>
+                <audio class="audio">
+                    <source src="audio/DJ Yella.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div class="button" data-song="audio/Quiet.mp3">
+                <h4 class="btnText">Arabian Prince</h4>
+                <audio class="audio">
+                    <source src="audio/Quiet.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+    </section>
+        
+
+        <script>
+
+    document.querySelectorAll('.button').forEach(button => {
+        const audio = button.querySelector(".audio");
+
+        // Cargar el audio sin reproducirlo automáticamente
+        audio.load();
+
+        button.addEventListener("mouseenter", async () => {
+            try {
+                await audio.play();
+            } catch (error) {
+                console.log("Autoplay bloqueado:", error);
+            }
+        });
+
+        button.addEventListener("mouseleave", () => {
+            audio.pause(); // Solo pausamos, pero no reiniciamos el tiempo
+        });
+
+        // Permitir reproducción con clic en móviles
+        button.addEventListener("click", () => {
+            audio.play().catch(error => console.log("Error al reproducir en móviles:", error));
+        });
+    });
+
+
+        </script>
+        <br><br><br><br><br><br><br><br><br>
+
+        
+
+
+
+    </body>
+    </html>
+
+
