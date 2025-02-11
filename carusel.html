@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://localhost/walletdigital/try/caruel.css">
+    <title>Buttons Hover Effect</title>
+</head>
+<body>
+    <div class="container-buttons">
+        <div class="button" data-song="audio/rose.mp3">
+            <h4 class="btnText">Karina</h4>
+            <audio class="audio">
+                <source src="audio/rose.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="button" data-song="audio/song2.mp3">
+            <h4 class="btnText">Winter</h4>
+            <audio class="audio">
+                <source src="audio/song2.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="button" data-song="audio/song3.mp3">
+            <h4 class="btnText">Ningning</h4>
+            <audio class="audio">
+                <source src="audio/song3.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="button" data-song="audio/song4.mp3">
+            <h4 class="btnText">Giselle</h4>
+            <audio class="audio">
+                <source src="audio/song4.mp3" type="audio/mp3">
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.button').forEach(button => {
+            const audio = button.querySelector(".audio");
+
+            // Forzar la carga del audio
+            audio.load();
+
+            button.addEventListener("mouseenter", async () => {
+                try {
+                    await audio.play();
+                } catch (error) {
+                    console.log("Autoplay bloqueado:", error);
+                }
+            });
+
+            button.addEventListener("mouseleave", () => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+        });
+
+    </script>
+</body>
+</html>
