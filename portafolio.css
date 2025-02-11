@@ -78,7 +78,7 @@ p .h{
   gap: 20px; /* Espacio entre los iconos */
   padding-top: 20px;
   @media (width <= 700px ){
-    gap: 15px;
+    gap: 10px;
     padding-top: 15px;
   }
 }
@@ -130,8 +130,8 @@ p .h{
   height: 40px;
   transition: all 0.3s ease;
     @media (widht <= 700px ) {
-        width: 20px;
-        height: 20px;
+        width: 1rem;
+        height: 1rem;
     }
 }
 
