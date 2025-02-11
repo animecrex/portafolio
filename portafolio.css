@@ -156,7 +156,7 @@ p .h{
   @media (width <= 700px ){
     transform: translateX(150px);
     height: 1rem;
-    widht: 10px;
+    widht: 6px;
 }
 }
 
