@@ -55,8 +55,8 @@ footer{
     left: 10px;
     @media (width <= 700px ){
         height: 130px;
-        transform: translateY(225px);
-        border-radius: 25%;
+        transform: translateY(125px);
+        border-radius: 50%;
     }
 
 }
@@ -157,7 +157,7 @@ p .h{
   border: none;
   cursor: pointer;
   @media (width <= 700px ){
-    transform: translateX(150px);
+    transform: translateX(85px);
     height: 2rem;
 }
 }
