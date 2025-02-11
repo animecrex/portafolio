@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Flex Card Animation</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <input type="radio" name="slide" id="s1">
+            <label for="s1" class="card" name="Jisoo">
+                <div class="content-card">
+                    <h3 class="name">Ice cube</h4>
+                    <h4 class="song">It Was A Good Day</h3>
+                    <img src="images/albumcube.jpeg" alt="" class="portada">
+                    <audio src="audio/ItWasAGoodDay.m4a" class="audio"></audio>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="s2">
+            <label for="s2" class="card" name="Jennie">
+                <div class="content-card">
+                    <h3 class="name">eazy e</h4>
+                    <h4 class="song">hello</h3>
+                    <img src="https://i.postimg.cc/nzBb9Jmc/youandme.jpg" alt="" class="portada">
+                    <audio src="audio/Eazy-E x Riot (extended)(M4A_128K).m4a" class="audio"></audio>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="s3">
+            <label for="s3" class="card" name="Rose">
+                <div class="content-card">
+                    <h3 class="name">Micheal Jackson</h4>
+                    <h4 class="song">Bad</h3>
+                    <img src="images/badm.jpeg" alt="" class="portada">
+                    <audio src="audio/Bad (2012 Remaster)(M4A_128K).m4a" class="audio"></audio>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="s4">
+            <label for="s4" class="card" name="Lisa">
+                <div class="content-card">
+                    <h3 class="name">Lisa</h4>
+                    <h4 class="song">Rockstar</h3>
+                    <img src="https://i.postimg.cc/DzWKFsyG/rockstar.jpg" alt="" class="portada">
+                    <audio src="audio/lisa.mp3" class="audio"></audio>
+                </div>
+            </label>
+        </div>
+    </div>    
+</body>
+</html>
+
+<script>
+    const btnCards = document.querySelectorAll('.card');
+
+btnCards.forEach((btnCard) => {
+    btnCard.addEventListener('click', () => {
+        const audio = btnCard.querySelector('.audio');
+        document.querySelectorAll('.audio').forEach(aud => aud.pause());
+        audio.currentTime = 0;
+        audio.play();
+    });
+});
+
+</script>
