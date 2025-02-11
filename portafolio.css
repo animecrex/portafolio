@@ -95,10 +95,10 @@ p .h{
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   @media (width <= 700px ){
-    height: 60px;
+    height: 70px;
     width: 50px;
     align-items: top;
-    margin-right: 2px;
+    margin-right: 4px;
   }
 }
 
