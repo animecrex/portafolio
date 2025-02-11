@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="css_style.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DynaPuff:wght@400..700&family=Kavoon&family=Signika+Negative:wght@300..700&display=swap');
+</style>
+</head>
+<body>
+    <div class="shadow"></div>
+    <div class="card-container">
+        <img src="https://i.postimg.cc/0jx6D6Rj/hanni-how.png" alt="" class="img">
+        <div class="rgbaFond"></div>
+        <img src="https://i.postimg.cc/vmJx8q0W/hanni-render.png" alt="" class="render">
+        <p class="song">How Sweet</p>
+        <audio src="audio/ItWasAGoodDay.m4a" class="audio"></audio>
+    </div>
+    <script>
+        const card = document.querySelector('.card-container');
+const audio = document.querySelector('.audio');
+
+card.addEventListener('mouseenter', ()=> {
+    audio.play(); 
+});
+
+card.addEventListener('mouseleave', ()=> {
+    audio.pause(); 
+    audio.currentTime = 0;
+});
+
+
+    </script>
+</body>
+</html>
