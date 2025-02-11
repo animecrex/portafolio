@@ -1,92 +1,89 @@
-body{
-    text-align: center;
-    font-size: clamp(1rem, 6vw, 1rem);
-    @media (width <= 700px ){
-        background-color: black;
-        color: white;
-    }
-   
+/* Estilos generales */
+body {
+  text-align: center;
+  font-size: clamp(1rem, 4vw, 1.5rem);
 }
 
-.header {
-    background-color: deepskyblue;
-    color: white;
-    text-align: center;
-    @media (width <= 700px ){
-        background-color: rgb(111, 1, 208);
-        color: white;
-        width: auto, fixed;
-    }
-    
-}
-
-
-footer{
-    background-color: deepskyblue;
-    color: white;
-    text-align: center;
-    @media (width <= 700px ){
-      background-color: rgb(111, 1, 208);
+/* Estilos para pantallas de 700px o menos */
+@media (max-width: 700px) {
+  body {
+      background-color: black;
       color: white;
-      width: auto, fixed;
+  }
+
+  .header {
+      background-color: rgb(111, 1, 208);
+      width: 100%;
+  }
+
+  footer {
+      background-color: rgb(111, 1, 208);
+      width: 100%;
+  }
+
+  .card {
+      height: auto;
+      margin: 10px;
+      background-color: rgba(97, 94, 94, 0.1);
+      color: white;
+      font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  .ip {
+      height: 130px;
+      transform: translateY(95px);
+      margin-left: 35%;
+      border-radius: 50%;
+  }
+
+  p.h {
+      text-align: justify;
+      margin: 30px;
+  }
+
+  .skills-wrapper {
+      gap: 10px;
+      padding-top: 15px;
+  }
+
+  .skill-icon {
+      height: 80px;
+      width: 55px;
+  }
+
+  .button {
+      transform: translateX(150px);
   }
 }
 
-.card{
-    @media (width <= 700px ){
-        height: 100px;
-        margin: 10px;
-        background-color: rgba(97, 94, 94, 0.1);
-        color: white;
-        width: auto;
-        height: auto;
-        font-size: clamp(1rem, 4vw, 1rem);
-    }
+/* Header */
+.header {
+  background-color: deepskyblue;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
 
-.ip{
-    border-radius: 80%;
-    border-width: 10px;
-    border-style: solid;
-    border-color: white;
-    height: 220px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    @media (width <= 700px ){
-        height: 130px;
-        transform: translateY(95px);
-        margin-left: 35%;
-        border-radius: 50%;
-    }
-
+/* Footer */
+footer {
+  background-color: deepskyblue;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
 
-p .h{
-    text-align:center, justify;
-    margin: 50px;
-    @media (width <= 700px ){
-        transform: translateY(99960px);
-        margin: 30%;
-    }
-}
-
-
+/* Sección de habilidades */
 .skills-wrapper {
   display: inline-flex;
   list-style: none;
   justify-content: center;
-  gap: 20px; /* Espacio entre los iconos */
+  gap: 20px;
   padding-top: 20px;
-  @media (width <= 700px ){
-    gap: 15px;
-    padding-top: 15px;
-  }
 }
 
 .skill-icon {
   position: relative;
-  background-color: #fff; /* Fondo por defecto */
+  background-color: #fff;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -95,53 +92,24 @@ p .h{
   align-items: center;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  @media (width <= 700px ){
-    height: 80px;
-    width: 55px;
-    align-items: top;
-  }
 }
 
-
-.skill-icon .tooltip::before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: #333;
-  transform: rotate(45deg);
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.skill-icon:hover {/* Fondo más oscuro al pasar el mouse */
-  transform: scale(2.1);
-  transform: translateY(-10px);
+.skill-icon:hover {
+  transform: scale(1.2);
   background-color: cornflowerblue;
 }
 
-.skill-icon:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-}
-
 .skill-icon img {
-  width: 40px; /* Tamaño del icono */
+  width: 40px;
   height: 40px;
   transition: all 0.3s ease;
 }
 
 .skill-icon:hover img {
-  transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el mouse */
+  transform: scale(1.2);
 }
 
-.skill-icon a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* From Uiverse.io by Madflows */ 
+/* Botón */
 .button {
   position: relative;
   overflow: hidden;
@@ -153,9 +121,6 @@ p .h{
   color: #fff;
   border: none;
   cursor: pointer;
-  @media (width <= 700px ){
-    transform: translateX(150px);
-}
 }
 
 .button:hover::before {
@@ -178,9 +143,9 @@ p .h{
   height: inherit;
   border-radius: inherit;
   background: linear-gradient(
-    82.3deg,
-    rgba(150, 93, 233, 1) 10.8%,
-    rgba(99, 88, 238, 1) 94.3%
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
   );
   transition: all 0.475s;
 }
