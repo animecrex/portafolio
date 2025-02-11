@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="csk.css">
+    <title>Lightstick</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="headContainer">
+                <div class="eyes">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                </div>
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg version="1.1" viewBox="0 0 1600 1372" class="off" width="1280" height="1280" xmlns="http://www.w3.org/2000/svg">
+                <path transform="translate(349,74)" d="m0 0h23l26 4 20 6 22 9 18 10 15 10 19 14 13 11 8 7 17 17 13 18 13 21 10 19 9 27 7 25 3 16 2 26 1 52 2 26 4 26 5 21 11 30 5 10 13 15 7 8 5 6 8 7 10 9 18 13 14 9 23 12 25 10 30 8 21 4h19l36-6 29-10 21-9 19-10 18-12 11-9 10-10 14-19 9-14 8-14 9-19 5-16 5-29 2-21 3-62 2-14 6-31 9-30 6-15 8-16 11-16 9-12 16-22 12-12 22-18 8-6 15-10 19-10 34-14 18-5 18-2h49l14 1 24 6 32 10 18 8 16 9 16 10 21 16 13 12 11 12 13 18 14 27 10 21 9 24 5 19 2 13 2 29 1 59-2 111-1 56-1 231-3 27-7 29-15 53-9 27-12 28-9 19-9 15-10 19-14 21-10 14-11 14-7 11-13 15-12 13-9 11-29 29-11 9-14 12-13 10-18 13-17 12-18 11-14 8-18 10-17 9-21 9-24 12-27 11-24 9-37 11-41 14-6 2-9-1-15-7-19-7-25-7-36-8-30-5-26-4h-79l-23 2-36 6-31 7-58 17h-13l-26-7-19-8-24-8-61-26-17-7-22-10-19-11-12-8-16-9-12-8-13-10-17-12-11-10-9-6-10-9-16-15-8-7-11-9-32-32-7-8-8-9-7-9-10-13-10-16-14-22-8-14-11-18-8-16-6-13-5-14-10-29-7-21-7-22-8-42-2-31-1-58v-394l2-25 4-20 7-14 1-15 5-18 12-23 9-16 6-10 14-18 11-12 12-12 11-9 18-13 18-11 17-8 27-9 24-5 28-4z" fill="#FBFCFC"/>
+                </svg>
+            </div>
+            <div class="layer-01"></div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg version="1.1" viewBox="0 0 1600 1372" class="btn" width="1280" height="1280" xmlns="http://www.w3.org/2000/svg">
+            <path transform="translate(349,74)" d="m0 0h23l26 4 20 6 22 9 18 10 15 10 19 14 13 11 8 7 17 17 13 18 13 21 10 19 9 27 7 25 3 16 2 26 1 52 2 26 4 26 5 21 11 30 5 10 13 15 7 8 5 6 8 7 10 9 18 13 14 9 23 12 25 10 30 8 21 4h19l36-6 29-10 21-9 19-10 18-12 11-9 10-10 14-19 9-14 8-14 9-19 5-16 5-29 2-21 3-62 2-14 6-31 9-30 6-15 8-16 11-16 9-12 16-22 12-12 22-18 8-6 15-10 19-10 34-14 18-5 18-2h49l14 1 24 6 32 10 18 8 16 9 16 10 21 16 13 12 11 12 13 18 14 27 10 21 9 24 5 19 2 13 2 29 1 59-2 111-1 56-1 231-3 27-7 29-15 53-9 27-12 28-9 19-9 15-10 19-14 21-10 14-11 14-7 11-13 15-12 13-9 11-7 7-1 2h-2l-1 3-8 7-10 10-11 9-14 12-13 10-18 13-17 12-18 11-14 8-18 10-17 9-21 9-24 12-27 11-24 9-37 11-6 5-25 7-17 4-48 5-47 3-56 2h-38l-53-2-62-4-47-5-53-6-13-4-31-12-20-7-61-26-19-8-20-9-19-11-12-8-16-9-12-8-13-10-17-12-11-10-9-6-10-9-16-15-8-7-11-9-32-32-7-8-8-9-7-9-10-13-10-16-14-22-8-14-11-18-8-16-6-13-5-14-10-29-7-21-7-22-8-42-2-31-1-58v-394l2-25 4-20 7-14 1-15 5-18 12-23 9-16 6-10 14-18 11-12 12-12 11-9 18-13 18-11 17-8 27-9 24-5 28-4z" fill="#FBFCFC"/>
+            </svg>
+            <div class="btnCircle"></div>
+            <div class="layer-02"></div>
+            <div class="layer-03"></div>
+        </div>
+    </div>
+  
+</body>
+</html>
+
+<script>
+    const btnLight = document.querySelector('.btn');
+const btnMode = document.querySelector('.btnCircle');
+const svg = document.querySelector('.off');
+
+btnLight.addEventListener('click', ()=> {
+    if(svg.classList.contains('off')){
+        svg.classList.add('white');
+        svg.classList.remove('off');
+    } else if(svg.classList.contains('white')){
+        svg.classList.add('green');
+        svg.classList.remove('white');
+        document.querySelector('.green').style.removeProperty('animation')
+    } else if(svg.classList.contains('green')){
+        svg.classList.add('pink');
+        svg.classList.remove('green');
+        document.querySelector('.pink').style.removeProperty('animation')
+    } else if(svg.classList.contains('pink')){
+        svg.classList.add('blue');
+        svg.classList.remove('pink');
+        document.querySelector('.blue').style.removeProperty('animation')
+    } else if(svg.classList.contains('blue')){
+        svg.classList.add('red');
+        svg.classList.remove('blue');
+        document.querySelector('.red').style.removeProperty('animation')
+    } else if(svg.classList.contains('red')){
+        svg.classList.add('yellow');
+        svg.classList.remove('red');
+        document.querySelector('.yellow').style.removeProperty('animation')
+    } else if(svg.classList.contains('yellow')){
+        svg.classList.add('off');
+        svg.classList.remove('yellow');
+        document.querySelector('.off').style.removeProperty('animation')
+    }
+});
+
+btnMode.addEventListener('click', ()=> {
+    if(svg.classList.contains('white')){
+        document.querySelector('.white').style.setProperty('animation', 'w-mode .3s infinite');
+    } else if(svg.classList.contains('green')){
+        document.querySelector('.green').style.setProperty('animation', 'g-mode .3s infinite');
+    } else if(svg.classList.contains('pink')){
+        document.querySelector('.pink').style.setProperty('animation', 'p-mode .3s infinite');
+    } else if(svg.classList.contains('blue')){
+        document.querySelector('.blue').style.setProperty('animation', 'b-mode .3s infinite');
+    } else if(svg.classList.contains('red')){
+        document.querySelector('.red').style.setProperty('animation', 'r-mode .3s infinite');
+    } else if(svg.classList.contains('yellow')){
+        document.querySelector('.yellow').style.setProperty('animation', 'y-mode .3s infinite');
+    }
+});
+</script>
