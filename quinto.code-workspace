@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../mysqlV.3"
+		},
+		{
+			"path": "../walletdigital"
+		},
+		{
+			"path": "../4tri/ajax"
+		}
+	],
+	"settings": {}
+}
