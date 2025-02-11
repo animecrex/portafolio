@@ -119,7 +119,7 @@ if (!$atributos['success']) {
                 confirmButtonText: 'OK'
             });
         </script>";
-        header("location: registrarse.php");
+        header("location: registrarse.html");
     }
 }
 ?>
