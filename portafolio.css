@@ -177,6 +177,7 @@ p .h{
 
 .button:hover::before {
   transform: scaleX(1);
+  background-color: #7c5ae3;
 }
 
 .button-content {
@@ -230,3 +231,60 @@ p .h{
 .project-card:hover p {
   opacity: 1;
 }
+
+.social-menu {
+  justify-self: end; 
+  @media (width <= 700px ){
+    transform: translateY(20px);
+  }
+}
+
+.social-menu ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.social-menu ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.social-menu ul li a:hover {
+  transform: translateY(-30%);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #9b7ff0;
+}
+
+.social-menu ul li:nth-child(2) a:hover {
+  background-color: #ec55b2;
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+  background-color: #559bec;
+}
+
+.social-menu ul li:nth-child(4) a:hover {
+  background-color: #030005;
+}
+
+
+.social-menu ul li a i {
+  transition: color 0.3s;
+}
+
+.social-menu ul li:nth-child(1) a:hover i { color: white; }  /* GitHub */
+.social-menu ul li:nth-child(2) a:hover i { color: white; } /* Instagram */
+.social-menu ul li:nth-child(3) a:hover i { color: white; } /* LinkedIn */
+.social-menu ul li:nth-child(4) a:hover i { color: white; }    /* CodePen */
