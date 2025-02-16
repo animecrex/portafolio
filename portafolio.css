@@ -15,6 +15,10 @@ body{
    
 }
 
+.center{
+  text-align: center;
+}
+
 .header, footer {
   background: linear-gradient(45deg, 
       rgb(204, 238, 253), 
@@ -83,14 +87,93 @@ body{
 
 }
 
-p .h{
-    margin: 50px;
-    @media (width <= 700px ){
-        transform: translateY(99960px);
-        margin: 30%;
-    }
+p {
+  text-align: left;
 }
 
+.h {
+  text-align: left;
+  margin-left: 90px;
+}
+
+.hl {
+  text-align: right;
+  margin-right: 90px;
+}
+
+.contenedor {
+  display: flex; 
+  justify-content: space-between; /* Separa los bloques */
+  align-items: flex-start; /* Alinea los títulos arriba */
+  gap: 30px; /* Espaciado entre columnas */
+  padding: 20px; /* Espacio general */
+}
+
+/* Ajuste de las columnas */
+.sobre-mi, .mis-gustos {
+  flex: 1; /* Ambos toman el mismo espacio */
+  max-width: 50%; /* Cada uno ocupa la mitad de la pantalla */
+}
+
+/* Ajuste de texto */
+.sobre-mi {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.mis-gustos {
+  text-align: right;
+  margin-right: 50px;
+}
+
+/* Estilos para las imágenes */
+.gustos-imagenes {
+  display: flex;
+  justify-content: flex-end; /* Alinea imágenes a la derecha */
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gustos-imagenes img {
+  width: 130px; /* Tamaño ajustable */
+  height: 130px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gustos-imagenes img:hover {
+  transform: scale(1.5);
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column; /* Se apilan en móviles */
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-mi, .mis-gustos {
+    max-width: 100%; /* Ocupan toda la pantalla */
+    text-align: center;
+    margin: 0;
+  }
+
+  .gustos-imagenes {
+    justify-content: center; /* Centra imágenes en móviles */
+  }
+}
+
+
+@media (width <= 700px ){
+  p .h{
+  transform: translateY(99960px);
+  margin: 30%;
+}
+
+}
 .container-carrossel {
   perspective: 3000px;
   margin: auto;
