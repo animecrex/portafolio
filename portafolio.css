@@ -342,6 +342,9 @@ p {
   font-size: 20px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  @media (width <= 700px ){
+    transform: translateX(15px);
+  }
 }
 
 .social-menu ul li a:hover {
